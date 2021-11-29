@@ -1,0 +1,5 @@
+-- THIS FILE WILL BE USED TO SAVE SCRIPT FOR CREATING DATABASE AND TABLES
+-- STUDENTS (studentid, lastname, firstname, dob)
+-- studentid is primary keyCOURSES (courseid, coursename, credits)
+-- courseid id primary keyGRADES (courseid, studentid, term, grade)
+-- the combination of courseid, studentid and term is primary keycourseid is a foreign key to courses(courseid)studentid is a foreign key to students(studentid)
