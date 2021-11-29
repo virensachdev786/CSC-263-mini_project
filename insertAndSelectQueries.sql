@@ -11,5 +11,5 @@ $sql = "INSERT INTO grades (courseid, studentid, term, grade)"
 
 
 --retrieve grade statement: 
-$sql = "SELECT courseid, studentid, term, grade  FROM grades";
+$sql = "SELECT courseid, studentid, term, grade FROM grades";
 
