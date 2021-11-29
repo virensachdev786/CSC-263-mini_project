@@ -22,12 +22,6 @@
         } 
         echo "Connected successfully";
 
-        
-
-
     ?>
-
-
-
     </body>
 </html>
