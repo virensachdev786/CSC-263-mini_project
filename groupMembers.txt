@@ -1,4 +1,4 @@
--> Andy: HTML / CSS
--> Jaskaran: Create database
--> Arham: Write SQL insert, select statements
--> Viren: PHP code linking everything together. 
+-> Andy (andypacheco@mail.adelphi.edu)             : HTML / CSS
+-> Jaskaran (jaskaransingh@mail.adelphi.edu)       : Create database
+-> Arham (arhamansari@mail.adelphi.edu)            : Write SQL insert, select statements
+-> Viren (virensachdev@mail.adelphi.edu)           : PHP code linking everything together. 
