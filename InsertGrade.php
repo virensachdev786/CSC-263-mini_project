@@ -15,40 +15,53 @@
 
         // collect value of input field
         $grade =     $_REQUEST['grade'];
-        $studentId = $_REQUEST['id'];
+        $studentId = $_REQUEST['studentId'];
         $courseId =  $_REQUEST['course'];
         $term =      $_REQUEST['term'];
+
+        echo " <strong> Entered values <br>
+                             courseid: $courseId <br>
+                             studentId: $studentId <br>
+                             term: $term <br>
+                             grade: $grade </strong> ";
 
         //error handling
         if ( empty($term) or empty($studentId) ) 
         {
-            echo "data is empty";
+            echo "<br> data is empty <br>";
         }
         
         //https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/
         else 
         {
             $sql = 
-            "INSERT INTO STUDENTGRADES 
-            VALUES ('$courseId' , '$studentid' , '$term' , '$grade')";
+            "INSERT INTO grades 
+            VALUES ('$courseId' , '$studentId' , '$term' , '$grade')";
 
-            if(mysqli_query($conn, $sql))
+            if(mysqli_query($mysqli, $sql))
             {
-                echo "<h3>data stored in a database successfully." 
-                    . " Please browse your localhost php my admin" 
-                    . " to view the updated data</h3>"; 
-      
-                echo nl2br("\n $courseId \n $studentid \n $term \n $grade \n");
-            } 
+                //https://stackoverflow.com/questions/26552268/redirecting-back-to-index-page-after-posting-in-php-mysql
+                echo 
+                "
+                <script>
+                    function redir()
+                    {
+                        alert('record added..');
+                        window.location.assign('menu.html');
+                    }
+                </script>
+                <body onload='redir();'> </body>
+                ";
+            }
             else
             {
-                echo "ERROR: Hush! Sorry $sql. ". mysqli_error($conn);
+                echo "<br> ERROR: Hush! Sorry $sql. ". mysqli_error($mysqli);
             }
         }
     }
 
     // Close connection
-    mysqli_close($conn);
+    mysqli_close($mysqli);
 ?>
             
             

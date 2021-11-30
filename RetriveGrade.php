@@ -24,33 +24,49 @@
         
         else 
         {
-            //save to variable print statement
-            echo $term ," and ", $studentId, " saved to variables";
             /*
             Select statements
             https://www.w3schools.com/php/php_mysql_select.asp
             */
             $sql = 
             "SELECT courseid, studentid, term, grade 
-            FROM STUDENTGRADES 
+            FROM GRADES 
             where studentid = '$studentId' and term = '$term' ";
-
-            $result = $conn->query($sql);
+            
+            //saving query resultant bool in an obj
+            $result = $mysqli->query($sql);
 
             if ($result->num_rows > 0) 
             {
+                echo 
+                "<table>
+                <tr>
+                    <th> courseid   </th> 
+                    <th> studentid  </th>
+                    <th> term       </th>
+                    <th> grade      </th>
+                </tr>";
                 // output data of each row
-                while($row = $result->fetch_assoc()) 
+                while($row = $result->fetch_assoc())
                 {
-                    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+                    echo 
+                    "<tr><td>".$row["courseid"].
+                    "</td><td>".$row["studentid"].
+                    "</td><td>".$row["term"].
+                    "</td><td>".$row["grade"].
+                    "</td></tr>";
                 }
-            } 
-            
+
+                //Back to menu option
+                echo "<a href=menu.html>Return to Menu </a>";
+        
+            }
             else 
             {
                 echo "0 results";
             }
         }
     }
-    $conn->close();
+    // Close connection
+    mysqli_close($mysqli);
 ?>

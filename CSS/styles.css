@@ -1,0 +1,65 @@
+body {
+    background-color: whitesmoke;
+  }
+  h1 {
+    color: black;
+    background: #ebebeb;
+    font-weight: normal;
+    display: inline-block;
+  }
+  p {
+    color: red;
+  }
+
+  /* the below used from course example as resource*/
+  #nav {
+    padding: 0;
+    background: #eef1ea;
+  }
+
+  #nav li {
+    line-height: 21px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+  }
+
+  #nav li a {
+    display: block;
+    padding: 8px 25px;
+  }
+
+  #nav li a:link {
+    color: #666;
+    text-decoration: none;
+  }
+
+  #nav li a:visited {
+    color: #666;
+    text-decoration: none;
+  }
+
+  #nav li a:hover {
+    color: #ebebeb;
+    text-decoration: none;
+    font-weight: normal;
+    background: blueviolet;
+  }
+
+  #nav li ul {
+    line-height: 27px;
+    list-style-type: none;
+    left: -999em;
+    width: 200px;
+    position: absolute;
+  }
+
+  #nav li:hover ul {
+    left: auto;
+  }
+
+  #nav li ul li {
+    display: block;
+    width: 200px;
+    background: #0d11ee;
+  }
