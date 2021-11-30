@@ -1,0 +1,4 @@
+-> Andy: HTML / CSS
+-> Jaskaran: Create database
+-> Arham: Write SQL insert, select statements
+-> Viren: PHP code linking everything together. 
