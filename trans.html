@@ -4,29 +4,41 @@
         <title>
             HTML Grade Posting
         </title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+
     </head>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
     <body>
         <h1>Retrive Grade for Student</h1>
 
-            <h4>
-                <a href=menu.html>Return to Menu </a>
-            </h4>
-        
-        <form method = "post" action= "RetriveGrade.php">
-            
-            <label for="term">Term: </label><br>
-            
-            <input type= "text" name = "term" value= ""> <br>
+            <ul id="nav">
 
-            <label for="id"> Student ID: </label> <br>
-            
-            <input type= "text" name = "id" value= ""> <br><br>
+                <li> <h4> <a href=menu.html>Return to Menu </a> </h4> </li>
 
-            <input type="submit" value = "Get Transcript">
-        
-        </form>
+                <!-- The Form data is sent with the HTTP Post Metod.-->
+                <form method = "post" action= "RetriveGrade.php">
+                    
+                    <label for="term">Term: </label> 
+                    
+                    <br>
+                    
+                    <input type= "text" name = "term" value= ""> 
+                    
+                    <br>
+
+                    <label for="studentId">Student ID:</label>
+                    
+                    <br>
+                    
+                    <input type= "text" name = "studentId" value= "">
+                    
+                    <br><br>
+
+                    <input type="submit" value = "Get Transcript">
+
+                </form>
+                
+            </ul>
     </body>
 </html>

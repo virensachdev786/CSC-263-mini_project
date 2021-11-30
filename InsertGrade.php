@@ -16,7 +16,7 @@
         // collect value of input field
         $grade =     $_REQUEST['grade'];
         $studentId = $_REQUEST['studentId'];
-        $courseId =  $_REQUEST['course'];
+        $courseId =  $_REQUEST['courseId'];
         $term =      $_REQUEST['term'];
 
         echo " <strong> Entered values <br>

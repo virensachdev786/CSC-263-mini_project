@@ -14,7 +14,7 @@
 
         // collect value of input field
         $term = $_REQUEST['term'];
-        $studentId = $_REQUEST['id'];
+        $studentId = $_REQUEST['studentId'];
 
         //error handling
         if ( empty($term) or empty($studentId) ) 

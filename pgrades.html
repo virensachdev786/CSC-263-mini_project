@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
         <title>
             HTML Grade Posting
         </title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
     </head>
+
     <body>
+        
         <h1>Post Grade for Student</h2>
-
-            <h4><a href=menu.html>Return to Menu</a></h4>
-        
-        <form method = "post" action= "InsertGrade.php">
+            <ul id="nav">
             
-        <label for="grade">Grade:</label><br>
-        <input type= "text" name = "grade" value= ""><br>
-
-        <label for="studentId">Student ID:</label><br>
-        <input type= "integer" name = "studentId" value= ""><br>
-
-        <label for="course">Course ID:</label><br>
-        <input type= "integer" name = "course" value= ""><br>
+                <li> <h4> <a href=menu.html>Return to Menu </a> </h4> </li>
         
-        <label for="term">Term:</label><br>
-        <input type= "integer" name = "term" value= ""><br><br>
+                <!-- The Form data is sent with the HTTP Post Metod.-->
+                <form method = "post" action= "InsertGrade.php">
+                    
+                    <label for="grade">Grade:</label><br>
+                    <input type= "text" name = "grade" value= ""><br>
 
-        <input type="submit" value = "Submit">
-        </form>
+                    <label for="studentId">Student ID:</label><br>
+                    <input type= "integer" name = "studentId" value= ""><br>
+
+                    <label for="courseId">Course ID:</label><br>
+                    <input type= "integer" name = "courseId" value= ""><br>
+                    
+                    <label for="term">Term:</label><br>
+                    <input type= "text" name = "term" value= ""><br><br>
+
+                    <input type="submit" value = "Submit">
+                
+                </form>
+            </ul>
     </body>
 </html>
