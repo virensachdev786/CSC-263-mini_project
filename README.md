@@ -1,6 +1,6 @@
 # CSC-263-mini_project
 
-Assignment 12: Embedding SQL in Web Applications
+Embedding SQL in Web Applications
 Develop a web-based application with a database backend that can be used for posting course grades and for retrieving transcripts.
 
 One page must allow a professor to post grades.
